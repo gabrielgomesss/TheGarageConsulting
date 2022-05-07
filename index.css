@@ -1,0 +1,366 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    overflow-x: hidden;
+    flex: 1;
+}
+.ContentBox{
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    display: block;
+    flex: 1;
+}
+.LogoBox{
+    display: flex;
+    width: 100%;
+    height: 70%;
+    align-self: center;
+    justify-content: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    animation: FadeIn 7s;
+}
+.Logo{
+    display: flex;
+    background-attachment: fixed;
+    align-self: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+}
+@keyframes FadeIn{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+.AboutBox{
+    display: block;
+    background-color: white;
+    width: 100vw;
+    height: 60vh;
+}
+.TitleBox{
+    animation: FadingAbout 4s ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+}
+.TitleBox >h4{
+    height: 1em;
+    font-size: 3.5em;
+    display: flex;
+    justify-content: center;
+    font-family: 'Oswald', 'Sans-Serif';
+    letter-spacing: 5px;
+    margin-bottom: 5%;
+    margin-top: 5%;
+}
+.AboutText{
+    display: flex;
+    width: 80%;
+    height: 100%;
+    margin-left: 10em;
+    align-self: center;
+    justify-content: center;
+}
+.AboutText > p{
+    display: flex;
+    margin-top: -12%;
+    font-family: 'Montserrat', 'Sans-Serif';
+    align-self: center;
+}
+@keyframes FadingAbout{
+    from{
+        opacity: 0;
+        transform: translateY(-170px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.ConsultingBox{
+    display: flex;
+    justify-content: center;
+    background-color: black;
+    width: 100vw;
+    height: 70vh;
+    margin-bottom: 10em;
+    
+}
+.ConsultingBox >h4{
+    width: 100%;
+    margin-left: 45%;
+    display: flex;
+    color: white;
+    position: absolute;
+    height: 1%;
+    font-size: 50px;
+    font-family: 'Oswald', 'Sans-Serif';
+    letter-spacing: 5px;
+    margin-top: 5%;
+    
+}
+.ConsultingBox > p{
+    color: white;
+    display: flex;
+    position: absolute;
+    margin-left: 21%;
+    width: 50%;
+    height: 60%;
+    margin-top: 12%;
+    font-family: 'Montserrat', 'Sans-Serif';
+    align-self: center;
+    font-size: 1rem;
+    overflow-y: auto;
+}
+.ConsultingBox > ul{
+    width: 100%;
+    height: 1%;
+    color: white;
+    font-family: 'Montserrat', 'Sans-Serif';
+    font-weight: 100;
+    display: block;
+    margin-top: 14.5%;
+    margin-left: 60%;
+    font-size: 1.5rem;
+}
+.ConsultingBox > img{
+    width: 30em;
+    height: 20em;
+    border-radius: 5px;
+    margin-top: 10%;
+    margin-left: -30%;
+    position: absolute;
+    opacity: 0.7;
+    -webkit-box-reflect: below -14em linear-gradient(to bottom, rgba(0,0,0,0.0), rgba(0,0,0,1));
+}
+.reveal{
+    position: relative;
+    transform: translateX(250px);
+    opacity: 0;
+    transition: 3s all ease;
+  }
+  
+  .reveal.active{
+    transform: translateX(0);
+    opacity: 1;
+  }
+.reveal2{
+    position: relative;
+    transform: translateY(-250px);
+    opacity: 0;
+    transition: 3s all ease;
+  }
+  
+  .reveal2.active{
+    transform: translateY(0);
+    opacity: 1;
+  }
+.reveal3{
+    position: relative;
+    transform: translateX(-250px);
+    opacity: 0;
+    transition: 3s all ease;
+  }
+  
+  .reveal3.active{
+    transform: translateX(0);
+    opacity: 1;
+  }
+.ContactBox{
+    display: block;
+    width: 100vw;
+    height: 60vh;
+    justify-content: center;
+}
+.ContactBox >h4{
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    color: black;
+    height: 1em;
+    font-size: 50px;
+    font-family: 'Oswald', 'Sans-Serif';
+    letter-spacing: 5px;
+    margin-top: -5%;
+}
+.ContactBox > p{
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    color: black;
+    font-family: 'Montserrat', 'Sans-Serif';
+    margin-top: 5%;
+}
+.ContactBox > span{
+    display: flex;
+    width: 100vw;
+    margin: 0 auto;
+    margin-left: -2.5em;
+    margin-top: 5%;
+    padding-inline: 30%;
+    justify-content: space-around;
+    align-self: center;
+    animation: Boucing 3s ease-in-out infinite;
+}
+@keyframes Boucing {
+    0%{
+        transform: translateY(0px);
+    }
+    50%{
+        transform: translateY(-25px);
+    }
+    100%{
+        transform: translateY(0px);
+    }
+}
+.ContactBox span > img {
+    width: 4.5em;
+    height: 4.5em;
+    cursor: pointer;
+    margin-left: 5em;
+}
+.Estoque{
+    display: flex;
+    background-color: #eee;
+    width: 100vw;
+    /* height: 80vh; */
+    justify-content: center;
+    align-self: center;
+    margin-top: 75em;
+    font-family: 'Montserrat', 'Sans-Serif';
+    
+}
+.Estoque >h4{
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    color: black;
+    font-size: 50px;
+    margin-top: 2%;
+    font-family: 'Oswald', 'Sans-Serif';
+    letter-spacing: 5px;
+}
+.CardContainer{
+    padding: 10%;
+    height: 100%;
+    width: 100%;
+    margin-left: 2em;
+}
+footer{
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    margin-top: 5em;
+    width: 100%;
+}
+.modal-backdrop {
+    /* bug fix - no overlay */    
+    display: none;    
+}
+@media(max-width: 678px){
+    .LogoBox{
+        width: 100vw;
+        height: 40vh;
+    }
+    .AboutBox{
+        display: block;
+        width: 100vw;
+        height: 100vh;
+        justify-content: center;
+    }
+    .TitleBox{
+        animation: none;
+        width: 100vw;
+        height: 5vh;
+    }
+    .TitleBox > h4{
+        display: flex;
+        justify-content: center;
+        width: 100vw;
+        height: 10vh;
+        font-size: 2rem;
+    }
+    .AboutText{
+        display: flex;
+        width: 100vw;
+        padding: 5%;
+        margin-left: 1em;
+        margin-top: 10em;
+    }
+    .AboutText > p {
+        width: 100vw;
+        height: 20%;
+        font-size: 1rem;
+        margin-top: -40em;
+    }
+    .ConsultingBox{
+        display: flex;
+        justify-content: center;
+        width: 100vw;
+        height: 80vh;
+    }
+    .ConsultingBox >h4{
+        display: flex;
+        justify-content: center;
+        width: 90vw;
+        font-size: 2rem;
+        margin-top: 5%;
+        margin-left: 10%;
+        font-weight: 900;
+    }
+    .ConsultingBox > img{
+        margin-top: 31.2em;
+    }
+    .ConsultingBox > p{
+        display: flex;
+        justify-content: center;
+        height: 60%;
+        width: 100vw;
+        margin-left: 12%;
+    }
+    .ConsultingBox > ul {
+        margin-top: 50%;
+        margin-left: 15%;
+    }
+
+    .ContactBox{
+        width: 100vw;
+        height: 80vh;
+        margin-top: 24em;
+    }
+    .ContactBox > p{
+        padding: 10%;
+        margin-top: -0.1em;
+    }
+    .ContactBox > span{
+        width: 20%;
+        margin-top: 15%;
+        display: flex;
+        justify-content: space-around;
+        margin-left: 3em;
+    }
+    .ContactBox span > img {
+        width: 4.5em;
+        height: 4.5em;
+        cursor: pointer;
+        margin-left: 5em;
+    }
+    .CardContainer{
+        margin-top: 5em;
+    }
+    .Estoque{
+        margin-top: 90em;
+    }
+}
